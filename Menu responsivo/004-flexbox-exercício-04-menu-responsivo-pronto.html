@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu Responsivo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <style type="text/css">
+ 	 * {
+		padding: 0;
+		margin: 0;
+		border: 0;
+		box-sizing: border-box
+	}
+	body {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 300;
+		color: #fff;
+		}
+	header {
+		background-color: mediumpurple;
+	}
+	nav {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 10px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+	nav #menu {
+		display: none;
+	}
+	nav ul {
+		margin-top: 10px;
+		width: 100%;
+		list-style-type: none;
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+	}	
+	nav ul li:not(.last) {
+		margin-bottom: 10px;
+	}
+	nav ul li a {
+		background-color: indigo;
+		padding: 10px 0;
+		text-align: center;
+		text-decoration: none;
+		color: #fff;
+		display: block;
+	}
+	nav ul li a:hover {
+		background-color: #000;
+	}
+	nav .menu {
+		background-color: indigo;
+		padding: 10px;
+		cursor: pointer;
+		align-self: flex-end;
+	}
+	nav .menu:hover {
+		background-color: #000;
+	}
+	nav #menu:checked ~  ul {
+		display: flex;
+	}
+	@media screen and (min-width: 480px) {
+		nav {
+			flex-direction: row; 
+		}
+		nav ul {
+			margin: 0;
+			width: 30%;
+			flex-direction: row;
+			display: flex;
+		}
+		nav ul li:not(.last) {
+		margin-bottom: 0;
+		}		
+		nav ul li {
+		flex: 0 1 31%;
+		margin-bottom: 0;
+		}
+		nav .menu {
+			display: none;
+		}
+	}
+  </style>
+</head> 
+<body>
+	<header>
+		<nav>
+			<input id="menu" type="checkbox">
+			<label for="menu" class="menu"><i class="fa fa-bars"></i></label>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li class="last"><a href="contato.html">Contato</a></li>
+			</ul>
+		</nav>
+	</header>	
+</body>
+</html>  
